@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Chatbot RAG",
+  "version": "1.0.0",
+  "description": "Interactive draggable chat widget for talking to YouTube transcripts.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Toggle YouTube Chatbot"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/watch*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
+    }
+  ]
+}

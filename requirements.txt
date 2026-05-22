@@ -1,0 +1,40 @@
+# LangChain core
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+
+# Google Gemini
+langchain-google-genai
+google-generativeai
+
+# HuggingFace embeddings
+langchain-huggingface
+sentence-transformers
+transformers
+torch
+
+# Vector DB
+faiss-cpu
+
+# YouTube transcripts
+youtube-transcript-api
+
+# Environment variables
+python-dotenv
+
+# API backend
+fastapi
+uvicorn
+
+# Validation
+pydantic
+
+# HTTP requests (later useful)
+requests
+
+# Optional: CORS for React frontend
+python-multipart
+
+# Optional: Better async handling
+httpx

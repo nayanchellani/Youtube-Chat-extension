@@ -1,0 +1,220 @@
+.yt-neobrutal-chat-container {
+  position: fixed;
+  top: 100px;
+  right: 50px;
+  width: 360px;
+  height: 480px;
+  background-color: #FFFFFF;
+  border: 4px solid #000000;
+  box-shadow: 8px 8px 0px #000000;
+  z-index: 2147483647;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.1s ease;
+}
+
+.yt-neobrutal-chat-header {
+  background-color: #FFDE4D;
+  color: #000000;
+  padding: 12px 16px;
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 4px solid #000000;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.yt-neobrutal-chat-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yt-neobrutal-chat-header-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #00FF66;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.yt-neobrutal-chat-header-dot.loading {
+  background-color: #FF5C5C;
+  animation: yt-neobrutal-pulse 1s infinite alternate;
+}
+
+.yt-neobrutal-chat-close-btn {
+  background: #FF5C5C;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  color: #000000;
+  font-weight: bold;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.yt-neobrutal-chat-close-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.yt-neobrutal-chat-close-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.yt-neobrutal-chat-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #FAF6EE;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.yt-neobrutal-msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #000000;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.yt-neobrutal-msg-user {
+  background-color: #9CEBFF;
+  align-self: flex-end;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.yt-neobrutal-msg-bot {
+  background-color: #FFFFFF;
+  align-self: flex-start;
+  border: 2px solid #000000;
+  box-shadow: -3px 3px 0px #000000;
+}
+
+.yt-neobrutal-msg-system {
+  background-color: #FFAA85;
+  align-self: center;
+  max-width: 95%;
+  text-align: center;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  font-size: 12px;
+}
+
+.yt-neobrutal-typing {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+}
+
+.yt-neobrutal-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #000000;
+  border-radius: 50%;
+  animation: yt-neobrutal-bounce 1.4s infinite ease-in-out both;
+}
+
+.yt-neobrutal-dot:nth-child(1) { animation-delay: -0.32s; }
+.yt-neobrutal-dot:nth-child(2) { animation-delay: -0.16s; }
+
+.yt-neobrutal-chat-input-area {
+  display: flex;
+  border-top: 4px solid #000000;
+  box-sizing: border-box;
+  height: 54px;
+  background-color: #FFFFFF;
+}
+
+.yt-neobrutal-chat-input {
+  flex: 1;
+  border: none;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #000000;
+  outline: none;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.yt-neobrutal-chat-input::placeholder {
+  color: #888888;
+}
+
+.yt-neobrutal-chat-send-btn {
+  background-color: #FF5C5C;
+  color: #000000;
+  border: none;
+  border-left: 4px solid #000000;
+  padding: 0 20px;
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.yt-neobrutal-chat-send-btn:hover {
+  background-color: #FF7B7B;
+}
+
+.yt-neobrutal-chat-send-btn:active {
+  background-color: #E24545;
+  padding-top: 2px;
+}
+
+.yt-neobrutal-chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.yt-neobrutal-chat-messages::-webkit-scrollbar-track {
+  background: #FAF6EE;
+  border-left: 2px solid #000000;
+}
+
+.yt-neobrutal-chat-messages::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 1px solid #FAF6EE;
+}
+
+@keyframes yt-neobrutal-pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes yt-neobrutal-bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1.0); }
+}
